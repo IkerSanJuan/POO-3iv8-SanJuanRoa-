@@ -35,7 +35,7 @@ public class TelCost{
             opr = Integer.parseInt(texto);
         }while(opr==1);
     }
-
+    //metodo para calcular el costo 
     public void cll(){
         texto = JOptionPane.showInputDialog("Ingrese la cantidad de llamadas Nacionales que va a realizar");
         nln = Integer.parseInt(texto);
@@ -65,6 +65,7 @@ public class TelCost{
         ct = ct-(int)tcs;
         JOptionPane.showMessageDialog(null,"Su credito es despues de la realizar las llamadas sera de:\n"+ct+"$");
     }
+    //metodo para sumar credito
     public void rc(){
         texto = JOptionPane.showInputDialog("Ingrese la cantidad que desee recargar entre 20$ y 200$");
         ac = Integer.parseInt(texto);
@@ -76,6 +77,7 @@ public class TelCost{
         ct = ac + ct;
         JOptionPane.showMessageDialog(null,"Su credito es despues de la recarga de:\n"+ct+"$");
     }
+    //metodo para consultar credito
     public void cc(){
         JOptionPane.showMessageDialog(null,"Su credito es de:\n"+ct+"$");
     }
