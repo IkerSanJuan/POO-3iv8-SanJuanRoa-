@@ -63,6 +63,7 @@ public class TelCost{
         lc = lc*nlc;
         tcs = ln+li+lc;
         ct = ct-(int)tcs;
+        JOptionPane.showMessageDialog(null,"Su total a pagar sera de:\n"+tcs+"$");
         JOptionPane.showMessageDialog(null,"Su credito es despues de la realizar las llamadas sera de:\n"+ct+"$");
     }
     //metodo para sumar credito

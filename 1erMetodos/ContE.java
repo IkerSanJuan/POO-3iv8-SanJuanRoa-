@@ -9,23 +9,23 @@ public class ContE{
     public void CalE(){
 
         JOptionPane.showMessageDialog(null,"Bienvenido\nA continuacion sabra que tan viejo es");
-        texto = JOptionPane.showInputDialog("Ingrese su ano de nacimiento");
+        texto = JOptionPane.showInputDialog("Ingrese su a\u00f1o de nacimiento");
         ao1 = Integer.parseInt(texto);
         if (ao1<=1900|ao1>=3000){
             JOptionPane.showMessageDialog(null,"Ano no valido volver a ingresar");
-            texto = JOptionPane.showInputDialog("Ingrese su ano de nacimiento");
+            texto = JOptionPane.showInputDialog("Ingrese su a\u00f1o de nacimiento");
             ao1 = Integer.parseInt(texto);
         }
-        texto = JOptionPane.showInputDialog("Ingrese el ano actual");
+        texto = JOptionPane.showInputDialog("Ingrese el a\u00f1o actual");
         ao2 = Integer.parseInt(texto);
         if (ao2<=ao1|ao1>=3000){
             JOptionPane.showMessageDialog(null,"Ano no valido volver a ingresar");
-            texto = JOptionPane.showInputDialog("Ingrese su ano de actual");
+            texto = JOptionPane.showInputDialog("Ingrese su a\u00f1o de actual");
             ao1 = Integer.parseInt(texto);
         }
         ed = ao2-ao1;
         ed2 = ed-1;
-        JOptionPane.showMessageDialog(null,"Usted tiene entre "+ed+" y "+ed2+" anos de viejo unu");
+        JOptionPane.showMessageDialog(null,"Usted tiene entre "+ed+" y "+ed2+" a\u00f1os de viejo unu");
 
 
     }
