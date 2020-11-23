@@ -36,7 +36,7 @@ public class Principal{
         }
         switch (opcionm) {
             case 1:
-                //SO.;
+                SO.MenuS();
                 break;
             case 2:
                 //Prov.;
