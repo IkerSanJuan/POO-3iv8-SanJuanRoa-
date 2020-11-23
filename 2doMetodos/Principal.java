@@ -1,10 +1,13 @@
-import javax.swing.;
+import javax.swing.JOptionPane;
 //donde se encuentra el menu principal y la opcion de repetir
 public class Principal{
-    //funcion principal
     //objetos para mandar a llamar clases
+    Sueldo SO = new Sueldo();
+    //Prov PR = new Prov();
+    //Biblio BL =new Biblio();
 
-    public private static void main(String[] args) {
+    //funcion principal
+    public static void main(String[] args) {
       
         //variables
         int opcionr;
@@ -23,21 +26,24 @@ public class Principal{
     //Donde dra la opcion para poder 
     public void menuP(){
         //variables
-        int opcionm;
+        int opcionm=0;
         String selec;
-
-        selec = JOptionPane.showInputDialog("3IV8_SANJUAN_ROA_IKERDEJESHUA\nSeleccione la opcion deseada:\n1) Sueldo\n2) Proovedores\n3) Biblioteca");
-        opcionm = Integer.parseInt(selec);
-
+        try{
+            selec = JOptionPane.showInputDialog("3IV8_SANJUAN_ROA_IKERDEJESHUA\nSeleccione la opcion deseada:\n1) Sueldo\n2) Proovedores\n3) Biblioteca");
+            opcionm = Integer.parseInt(selec);
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,"Ingresa solo valores enteros\nError: "+e.getMessage());
+        }
         switch (opcionm) {
             case 1:
-                
+            JOptionPane.showMessageDialog(null,"HOLIS");
+                //SO.;
                 break;
             case 2:
-                
+                //Prov.;
                 break;
             case 3:
-                
+                //Biblio.;
                 break;
             default:
                 break;
