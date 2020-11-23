@@ -36,7 +36,6 @@ public class Principal{
         }
         switch (opcionm) {
             case 1:
-            JOptionPane.showMessageDialog(null,"HOLIS");
                 //SO.;
                 break;
             case 2:
