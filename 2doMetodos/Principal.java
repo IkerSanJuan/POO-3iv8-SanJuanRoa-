@@ -4,7 +4,7 @@ public class Principal{
     //objetos para mandar a llamar clases
     Sueldo SO = new Sueldo();
     Prov PR = new Prov();
-    Biblio BL =new Biblio();
+    EstanteP BL =new EstanteP();
 
     //funcion principal
     public static void main(String[] args) {
@@ -42,7 +42,7 @@ public class Principal{
                 PR.MenuPR();
                 break;
             case 3:
-                Biblio.LibPres();
+                BL.Libros();
                 break;
             default:
                 break;

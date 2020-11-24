@@ -1,13 +1,11 @@
 public class EstanteP{
     public void Libros(){
     Biblio libpres = new Biblio();
-    LibWE WE = new WE();
-    Gato cat = new Gato();
-    Sledge maestro = new Sledge();
+    LibWE WE = new LibWE();
+    LibLDC ladivina = new LibLDC();
 
-    dog.mostrarPerro();
-    cat.mostrarGato();
-    maestro.mostrarJordi();
-    mePrestar.Prestado();
+    WE.mostrarLibWiVe();
+    ladivina.mostrarLibLaDivCo();
+    libpres.LibPres();
     }
 }
