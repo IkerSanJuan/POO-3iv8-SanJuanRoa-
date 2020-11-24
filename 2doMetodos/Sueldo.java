@@ -4,7 +4,7 @@ public class Sueldo{
 
     int id, opp, oprs, sueldonn, hed=50, hen=60, sueldoe=5000;
     double totalg, sueldon, sueldoes=8000, isr=1280, inf=1600, sgmed=800;
-    String noe;
+    String noe, texto;
     //Inicio donde se ingresaran los datos principales
     public void MenuS(){
 
@@ -35,8 +35,18 @@ public class Sueldo{
     }
     // clase para calcular sueldo de emplesdo normal
     public void SueldoE(){
-        hed = Integer.parseInt(JOptionPane.showInputDialog("Ingrese sus horas extras diurnas: "));
-        hen = Integer.parseInt(JOptionPane.showInputDialog("Ingrese sus horas extras nocturnas: "));
+        hed = Integer.parseInt(JOptionPane.showInputDialog("Ingrese sus horas extras diurnas de esta quincena: "));
+        if(hed<0|hed>36){
+            JOptionPane.showMessageDialog(null,"La cantidad ingresada no es valida intente de nuevo");
+            texto = JOptionPane.showInputDialog("Ingrese la cantidad de de horas extras diurnas de esta quincena: ");
+            hed = Integer.parseInt(texto);
+        }
+        hen = Integer.parseInt(JOptionPane.showInputDialog("Ingrese sus horas extras nocturnas de esta quncena: "));
+        if(hen<0|hen>36){
+            JOptionPane.showMessageDialog(null,"La cantidad ingresada no es valida intente de nuevo");
+            texto = JOptionPane.showInputDialog("Ingrese la cantidad de de horas extras diurnas de esta quincena: ");
+            hed = Integer.parseInt(texto);
+        }
         sueldonn = sueldoe + hed + hen;
         FinalSE();
     }
