@@ -19,10 +19,10 @@ public class LibLDC extends Lib{
     }
 
     public void mostrarLibLaDivCo(){
-        JOptionPane.showMessageDialog(null,"\nLibro 2:\n\u00ab" + getNombre() + "\u00bb"
-                            + ", de " + getRaza()
-                            + "\nEjemplares disponibles: " + getTipoAlimento() + "."
-                            + "\nEjemplares prestados: " + getEdad() + ".\n"
+        JOptionPane.showMessageDialog(null,"\nLibro 2: " /*+ getNombre()+*/ 
+                             ", de " /*+ getRaza()*/
+                             "\nEjemplares disponibles: " + getTipoAlimento() + "."
+                             "\nEjemplares prestados: " + getEdad() + ".\n"
                             + getalerte());
     }
 }

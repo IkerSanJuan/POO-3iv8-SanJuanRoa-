@@ -19,10 +19,10 @@ public class LibWE extends Lib{
     }
 
     public void mostrarLibWiVe(){
-        JOptionPane.showMessageDialog(null,"\nLibro 1:\n\u00ab" + getNombre() + "\u00bb"
-                            + ", de " + getRaza()
-                            + "\nEjemplares disponibles: " + getTipoAlimento() + "."
-                            + "\nEjemplares prestados: " + getEdad() + ".\n"
+        JOptionPane.showMessageDialog(null,"\nLibro 1:\n Wigetta: un viaje mágico" /*+ getNombre()+*/
+                             ", de Autores: Vegetta777, Willyrex" /*+ getRaza()*/
+                             "\nEjemplares disponibles: " + getTipoAlimento() + "."
+                             "\nEjemplares prestados: " + getEdad() + ".\n"
                             + getalerte());
     }
 }
