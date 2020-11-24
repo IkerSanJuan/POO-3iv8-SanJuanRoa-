@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 public class Principal{
     //objetos para mandar a llamar clases
     Sueldo SO = new Sueldo();
-    //Prov PR = new Prov();
+    Prov PR = new Prov();
     //Biblio BL =new Biblio();
 
     //funcion principal
@@ -39,7 +39,7 @@ public class Principal{
                 SO.MenuS();
                 break;
             case 2:
-                //Prov.;
+                Prov.MenuPR;
                 break;
             case 3:
                 //Biblio.;
