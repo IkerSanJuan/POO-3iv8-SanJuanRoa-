@@ -2,9 +2,9 @@ import javax.swing.JOptionPane;
 
 public class Sueldo{
 
-    int id, opp, oprs, sueldonn, hed=50, hen=60, sueldoe=5000;
-    double totalg, sueldon, sueldoes=8000, isr=1280, inf=1600, sgmed=800;
-    String noe, texto;
+    private int id, opp, oprs, sueldonn, hed=50, hen=60, sueldoe=5000;
+    private double totalg, sueldon, sueldoes=8000, isr=1280, inf=1600, sgmed=800;
+    private String noe, texto;
     //Inicio donde se ingresaran los datos principales
     public void MenuS(){
 
