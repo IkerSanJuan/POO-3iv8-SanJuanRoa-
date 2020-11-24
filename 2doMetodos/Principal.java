@@ -39,7 +39,7 @@ public class Principal{
                 SO.MenuS();
                 break;
             case 2:
-                Prov.MenuPR;
+                PR.MenuPR();
                 break;
             case 3:
                 //Biblio.;

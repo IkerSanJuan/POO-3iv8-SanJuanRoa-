@@ -1,57 +1,48 @@
 import javax.swing.JOptionPane;
 
 public class Prov{
-    String nomc;
-    int i, j;
-    int[] costo = new int[10];
-    int[] ex = new int[10];
-    String[] producto = new String[10];
-    float suma_costo, max, min, pro;
+    private String nomc;
+    private int i, j;
+    private int[] cost = new int[10];
+    private int[] ex = new int[10];
+    private String[] produ = new String[10];
+    private float sumcost, max, min, pro;
 
     public void MenuPR(){
-        nomc = JOptionPane.showInputDialog("Ingrese el nombre de su cliente:");
-
-        JOptionPane.showMessageDialog(null, "Digite el costo y el nombre de sus productos uno a uno.");
-        for(i = 0; i < costo.length; i++){
-            costo[i] = Integer.parseInt(JOptionPane.showInputDialog("Costo " + (i + 1) + ":"));
-            suma_costo += costo[i];
-            producto[i] = JOptionPane.showInputDialog("Producto " + (i + 1) + ":");
-        }
-
-        min = max = costo[0];
-        for (i = 0; i < costo.length; i++){
-            if(costo[i] > max){
-                max = costo[i];
+        nomc = JOptionPane.showInputDialog("                    Bienvenido\nIngrese el nombre de su cliente: ");
+        try{
+            JOptionPane.showMessageDialog(null, "Ingrese el nombre y el costo de los productos uno por uno: ");
+            for(i = 0; i < cost.length; i++){
+                produ[i] = JOptionPane.showInputDialog("Nombre del producto numero " + (i + 1) + ": ");
+                cost[i] = Integer.parseInt(JOptionPane.showInputDialog("Costo numero " + (i + 1) + ": "));
+                sumcost += cost[i];
             }
-            else if(costo [i] < min){
-                min = costo[i];
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,"Ingresa solo valores enteros\nError: "+e.getMessage());
+        }
+
+        min = max = cost[0];
+        for (i = 0; i < cost.length; i++){
+            if(cost[i] > max){
+                max = cost[i];
+            }
+            else if(cost [i] < min){
+                min = cost[i];
             }
         }
 
-        JOptionPane.showMessageDialog(null, "Digite las existencias de sus productos uno a uno."); 
-        for(j = 0; j < existencia.length; j++){
-            existencia[j] = Integer.parseInt(JOptionPane.showInputDialog("Existencia " + (j + 1) + ":"));
+        JOptionPane.showMessageDialog(null, "Ingrese las existencias de sus productos uno por uno: "); 
+        for(j = 0; j < ex.length; j++){
+            ex[j] = Integer.parseInt(JOptionPane.showInputDialog("Existencia " + (j + 1) + ":"));
         }
-        NegocioR();
+        provR();
     }
 
     public void provR(){
-        JOptionPane.showMessageDialog(null, "El total de costos es de: " + suma_costo + " $.");
-        JOptionPane.showMessageDialog(null, "Costo mayor: " + max + " $.");
-        JOptionPane.showMessageDialog(null, "Costo menor: " + min + " $.");
-        pro = suma_costo/costo.length;
-        JOptionPane.showMessageDialog(null, "El promedio de los costos es de: " + pro + " $ .");
+        JOptionPane.showMessageDialog(null, "El total de costos es de: " + sumcost + " $\nCosto mayor: " + max + " $\nCosto menor: " + min + " $");
+        pro = sumcost/cost.length;
+        JOptionPane.showMessageDialog(null, "El promedio de los costos es de: " + pro + " $ ");
         
-        JOptionPane.showMessageDialog(null, "Su cliente es: " + nomc + ".");
-        JOptionPane.showMessageDialog(null, "(" + existencia[0] + ") " + producto[0] + " cost\u00f3 " + (costo[0] * existencia[0]) + " $.");
-        JOptionPane.showMessageDialog(null, "(" + existencia[1] + ") " + producto[1] + " cost\u00f3 " + (costo[1] * existencia[1]) + " $.");
-        JOptionPane.showMessageDialog(null, "(" + existencia[2] + ") " + producto[2] + " cost\u00f3 " + (costo[2] * existencia[2]) + " $.");
-        JOptionPane.showMessageDialog(null, "(" + existencia[3] + ") " + producto[3] + " cost\u00f3 " + (costo[3] * existencia[3]) + " $.");
-        JOptionPane.showMessageDialog(null, "(" + existencia[4] + ") " + producto[4] + " cost\u00f3 " + (costo[4] * existencia[4]) + " $.");
-        JOptionPane.showMessageDialog(null, "(" + existencia[5] + ") " + producto[5] + " cost\u00f3 " + (costo[5] * existencia[5]) + " $.");
-        JOptionPane.showMessageDialog(null, "(" + existencia[6] + ") " + producto[6] + " cost\u00f3 " + (costo[6] * existencia[6]) + " $.");
-        JOptionPane.showMessageDialog(null, "(" + existencia[7] + ") " + producto[7] + " cost\u00f3 " + (costo[7] * existencia[7]) + " $.");
-        JOptionPane.showMessageDialog(null, "(" + existencia[8] + ") " + producto[8] + " cost\u00f3 " + (costo[8] * existencia[8]) + " $.");
-        JOptionPane.showMessageDialog(null, "(" + existencia[9] + ") " + producto[9] + " cost\u00f3 " + (costo[9] * existencia[9]) + " $.");
+        JOptionPane.showMessageDialog(null,"Su cliente es: " + nomc + "\nY sus productos son:\n1.-"+produ[0]+" con existencia "+ex[0]+" y costo " +(cost[0] * ex[0])+"\n2.-"+produ[1]+" con existencia "+ex[1]+" y costo " +(cost[1] * ex[1])+" $\n3.-"+produ[2]+" con existencia "+ex[2]+" y costo " +(cost[2] * ex[2])+" $\n4.-"+produ[3]+" con existencia "+ex[3]+" y costo " +(cost[3] * ex[3])+" $\n5.-"+produ[4]+" con existencia "+ex[4]+" y costo " +(cost[4] * ex[4])+" $\n6.-"+produ[5]+" con existencia "+ex[5]+" y costo " +(cost[5] * ex[5])+" $\n7.-"+produ[6]+" con existencia "+ex[6]+" y costo " +(cost[6] * ex[6])+" $\n8.-"+produ[7]+" con existencia "+ex[7]+" y costo " +(cost[7] * ex[7])+" $\n9.-"+produ[8]+" con existencia "+ex[8]+" y costo " +(cost[8] * ex[8])+" $\n10.-"+produ[9]+" con existencia "+ex[9]+" y costo " +(cost[9] * ex[9])+" $");
     }
 }
