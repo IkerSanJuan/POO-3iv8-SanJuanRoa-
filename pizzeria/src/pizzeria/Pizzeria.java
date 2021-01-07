@@ -37,7 +37,9 @@ public class Pizzeria {
                 break;
             case 3:
                 Vegetariana vege = new Vegetariana();
-                
+                vege.preparar();
+                vege.hornear();
+                vege.cortar();
                 break;
             default:
                 System.out.println("Gracias adios uwu");
